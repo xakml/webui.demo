@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>被加载的页面</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        A {
+            FONT-SIZE: 12px;
+            COLOR: #000000;
+            TEXT-DECORATION: none
+        }
+
+        A:hover {
+            COLOR: #ffcc00
+        }
+
+        A.blue {
+            COLOR: darkblue
+        }
+
+        body,
+        p,
+        td {
+            FONT-SIZE: 12px
+        }
+    </style>
+</head>
+
+<body style="BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #000000 1px solid; MARGIN: 0pt; OVERFLOW: hidden; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid"
+    bgColor="#009ace" leftMargin="0" topMargin="10">
+
+    <div>
+        <div class="form-group">
+            <label for="dp_file_type">选择类型</label>
+            <select type="text" name="other_file" id="dp_file_type">
+                <option value="营业执照复印件">营业执照复印件</option>
+                <option value="法人代表身份证">法人代表身份证</option>
+                <option value="入会申请表">入会申请表</option>
+            </select>
+            <label>
+                 <input type="checkbox" name="other_file" id="other_file">其他文件
+            </label>
+        </div>
+        <div class="form-group">
+                <label for="txt_other_file">其他文件</label>
+                <input type="text" name="other_file" id="txt_other_file">
+            </div>
+        <div class="form-group">
+           <!-- <label for="file">选择文件</label> -->
+            <input type="file" name="file" id="file" />
+        </div>
+      
+        <input type="button" name="btnSubmit" class="btn btn-default" value="上传" onclick="upload()" />
+
+    </div>
+    <script type="text/javascript">
+        function upload() {
+            var xhr = new XMLHttpRequest();
+            var formdata = new FormData();
+
+        }
+    </script>
+</body>
+
+</html>

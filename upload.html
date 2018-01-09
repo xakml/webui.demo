@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>文件上传测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <p>提交到测试服务器</p>
+    <form action="http://10.0.21.26:8888/JC.CRM.Webapi/Membertown/file" method="post" enctype="multipart/form-data">
+        <input type="file" name="myfile" /><br />
+        <input type="submit" value="提交到测试服务器" />
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <p>提交到本机服务器</p>
+        <form action="http://localhost/JC.CRM.WebApi/Membertown/file" method="post" enctype="multipart/form-data">
+            <input type="file" name="myfile" />
+            <br/>
+            <input type="submit" value="提交附件" />
+        </form>
+    </div>
+</body>
+
+</html>

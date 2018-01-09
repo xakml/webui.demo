@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>确认推荐</title>
+    <!-- <script src="/WebResources/hd_jquery.js"></script> -->
+    <script type="text/javascript" src="/WebResources/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/WebResources/dialog.js"></script>
+    
+    <link href="./WebResources/gf_bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body style="word-wrap:break-word;">
+
+    
+        <div class="panel panel-primary" style="font-family: undefined;">
+            <dl class="dl-horizontal">
+        <dt>推荐单位名称：</dt>
+        <dd id="company_name">三菱中国公司</dd>
+<br />
+        <dt>单位简介：</dt>
+        <dd>重工制造</dd>
+<br />
+        <dt>联系人姓名：</dt>
+        <dd>周星驰</dd>
+<br />
+        <dt>联系人职务：</dt>
+        <dd>导演</dd>
+<br />
+        <dt>联系方式：</dt>
+        <dd>保密</dd>
+<br />
+        <dt>推荐人姓名：</dt>
+        <dd>杰克逊</dd>
+<br />
+        <dt>推荐人联系方式：</dt>
+        <dd>已销户</dd>
+    </dl>
+<input type="checkbox" name="chk_agree" name="复选框状态"/>
+        <div class="panel-footer text-center">
+            <input type="text" name="phone_confirm_note" />
+            <input class="btn btn-primary" onclick="submit()" type="button" value="推 荐">
+            <input class="btn btn-default" onclick="exit()" type="button" value="取 消">
+            <input class="btn btn-default" onclick="a()" type="button" value="赋值">
+            <input class="btn btn-default" onclick="getValue()" type="button" value="取值">
+            <input class="btn btn-default" onclick="b()" type="button" value="ModalDialog">
+            <input class="btn btn-default" onclick="getException()" type="button" value="自定义异常捕获">
+            <input class="btn btn-default" onclick="showArtDialog()" type="button" value="弹框">
+        </div>
+    </div>
+    <script type="text/javascript">
+        function a()
+        {
+            $('input[name="phone_confirm_note"]').val("buwanl");
+            $('input[name="chk_agree"]').attr("checked","true");
+            $('#company_name').html("a");
+            alert("设置完成");
+        }
+          function b()
+        {
+           var userNameValue="abc";  
+           var tempValue=window.showModalDialog("http://www.baidu.com",userNameValue,"dialogHeight=300px;dialogWidth=400px");  
+            console.log(tempValue);
+        }
+        function getValue(){
+            var note = $('input[name="phone_confirm_note"]').val();
+            var chk_value = $('input[name="chk_agree"]:checked').val() == "on"?true:false;
+            alert(note + chk_value);
+        }
+        function getException()
+        {
+            try{
+                throw '这里抛出异常';
+            }catch(e){
+                alert(window.JSON.stringify(e));
+            }
+        }
+        function showArtDialog()
+        {
+            var d = dialog({
+                title: '详细日志',
+                content: '{"Attributes":[{"key":"jc_confirmed_by","value":{"__type":"EntityReference:http:\/\/schemas.microsoft.com\/xrm\/2011\/Contracts","Id":"345a6f88-624d-e611-80cf-005056a94cce","KeyAttributes":[],"LogicalName":"systemuser","Name":null,"RowVersion":null}},{"key":"jc_is_confirmed","value":true},{"key":"jc_membertowns_confirm_pendingid","value":"5b03280b-10c8-e711-80db-005056a94cce"},{"key":"modifiedon","value":"\/Date(1510550128000)\/"},{"key":"modifiedby","value":{"__type":"EntityReference:http:\/\/schemas.microsoft.com\/xrm\/2011\/Contracts","Id":"345a6f88-624d-e611-80cf-005056a94cce","KeyAttributes":[],"LogicalName":"systemuser","Name":null,"RowVersion":null}},{"key":"modifiedonbehalfby","value":null}],"EntityState":null,"FormattedValues":[],"Id":"5b03280b-10c8-e711-80db-005056a94cce","KeyAttributes":[],"LogicalName":"jc_membertowns_confirm_pending","RelatedEntities":[],"RowVersion":null}',
+                cancel:false,
+                okValue: '确定',
+                ok:function(){}
+            });
+            d.showModal();
+        }
+    </script>
+    
+</body>
+</html>

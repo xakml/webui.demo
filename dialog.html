@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>css3带阴影弹出窗口 - 站长素材</title>
+    <meta name="keywords" content="jquery, lightbox, ulightbox, userdot" />
+    <link rel="stylesheet" media="screen" href="http://www.xakml.net:8000/dialog/css/documentation.css" />
+    <script type="text/javascript" src="http://www.xakml.net:8000/dialog/js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.xakml.net:8000/dialog/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://www.xakml.net:8000/dialog/js/jquery.ulightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.xakml.net:8000/dialog/css/jquery.ulightbox.css" />
+</head>
+
+<body>
+    <div>
+        <input id="alert" type="button" class="flat bgFix" value="alert('Hello!')" />
+        <input id="ajax" type="button" class="flat bgFix" value="Ajax Content" />
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            uLightBox.init({
+                override: true,
+                background: 'white',
+                centerOnResize: true,
+                fade: true
+            });
+            $('#alert').click(function () {
+                alert('Hello');
+            });
+            $('#ajax').click(function () {
+                uLightBox.alert({
+                    width: '400px',
+                    title: '文件上传',
+                    rightButtons: ['OK'],
+                    leftButtons: ['Close'],
+                    opened: function () {
+                        $('<span />').load('demo.html').appendTo('#lbContent');
+                    },
+                    onClick: function (button) {
+                        console.log(button);
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>MVC文件上传测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <p>提交到本地服务器</p>
+    <form action="http://localhost:6151/Attach/upload" method="post" enctype="multipart/form-data">
+        <label for="myfile">文件</label>
+        <input type="file" name="myfile" /><br />
+
+        <label for="filename">重命名文件</label>
+        <input type="text" name=filename /><br />
+        <input type="submit" value="提交" />
+    </form>
+    <br/>
+    <br/>
+    <br/>
+</body>
+
+</html>
