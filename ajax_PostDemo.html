@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AjaxPost提交</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <form method="POST" id="mainForm" name="mainForm" action="http://localhost/identity2study/AppUser/Create">
+        <label for="username">UserName</label>
+        <input type="text" name="UserName" id="username" />
+        <label for="emailaddress">Email</label>
+        <input type="text" name="EmailAddress" id="emailaddress" />
+        <input type="button" name="btnSubmit" id="btnSubmit" value="Save" />
+    </form>
+    <script src="Scripts/ajax_PostDemo.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Normal-AjaxPost</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h3>普通的ajax提交</h3>
+    <form method="POST" id="mainForm" name="mainForm" action="http://localhost/identity2study/AppUser/Create">
+        <label for="username">UserName</label>
+        <input type="text" name="UserName" id="username" />
+        <label for="emailaddress">Email</label>
+        <input type="text" name="EmailAddress" id="emailaddress" />
+        <input type="button" name="btnSubmit" id="btnSubmit" value="Save" />
+    </form>
+    <script type="text/javascript">
+        $("#btnSubmit").click(
+            function(){
+                //var formData = document.forms.namedItem("mainForm");
+                var formData = $("#mainForm").serializeArray();
+                $.ajax(
+                    {
+                        url:"http://localhost/identity2study/AppUser/Create",
+                        type:"Post",
+                        dataType:"json",
+                        data:formData,
+                        success:function(data,status){
+                            console.log(data);
+                            alert("提交成功");
+                        },
+                        error:function(xhr,error_msg,exception){
+                            console.error(error_msg);
+                            alert("提交失败");
+                        }
+                    }
+                );
+            }
+        );
+    </script>
+</body>
+</html>
