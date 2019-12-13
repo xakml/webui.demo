@@ -6,10 +6,12 @@
 
 <body>
     <p>提交到本地服务器</p>
-    <form action="http://localhost:6151/Attach/upload" method="post" enctype="multipart/form-data">
+    <form action="http://localhost:31519/api/file" method="post" enctype="multipart/form-data">
         <label for="myfile">文件</label>
         <input type="file" name="myfile" /><br />
-
+		<input type="text" name="id" value="0AE6E74E-206C-4C67-8D6F-3F710BF11D35"/>
+		<input type="text" name="CreatedTime" value="2019-10-17 18:58:11"/>
+		<input type="text" name="ModeifiedTime" value="2019-10-17 18:58:14"/>
         <label for="filename">重命名文件</label>
         <input type="text" name=filename /><br />
         <input type="submit" value="提交" />
