@@ -11,27 +11,27 @@
         $(document).ready(function () {
             $("#button").click(function () {
 
-            //    var arr = { name: "kitty", age: 21 };
-            //    $.ajax({
-            //        url: 'http://192.168.10.152:2030/api/price/addprice',
-            //        type: 'POST',
-            //        data: JSON.stringify(arr),
-            //        contentType: 'application/json; charset=utf-8',
-            //        dataType: 'json',
-            //        async: false,
-            //        success: function (msg) {
-            //            alert(msg);
-            //        }
-            //    });
+                var arr = { name: "kitty", age: 21 };
+                $.ajax({
+                    url: 'http://192.168.10.152:2030/api/price/addprice',
+                    type: 'POST',
+                    data: JSON.stringify(arr),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    async: false,
+                    success: function (msg) {
+                        alert(msg);
+                    }
+                });
 
-                $.post("http://192.168.10.152:2030/api/price/addprice",
-                    {
-                        name: "Donald Duck",
-                        city: "Duckburg"
-                    },
-                    function (data, status) {
-                        alert("Data:" + data + "\nStatus:" + status);
-                    });
+                //$.post("http://192.168.10.152:2030/api/price/addprice",
+                //    {
+                //        name: "Donald Duck",
+                //        city: "Duckburg"
+                //    },
+                //    function (data, status) {
+                //        alert("Data:" + data + "\nStatus:" + status);
+                //    });
             });
         });
     </script>
