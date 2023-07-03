@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JS防抖示例</title>
+    <script src="Scripts/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<form>
+    <input id="txtProduct" name="productCode" type="text"/>
+    <input id="submit" name="btnSubmit" type="button" value="submit"/>
+</form>
+
+<script type="text/javascript">
+var _KeyBoard1 = { UP: 38, DOWN: 40, DEL: 46, TAB: 9, RETURN: 13, ESC: 27, COMMA: 188, PAGEUP: 33, PAGEDOWN: 34, BACKSPACE: 8, LEFT: 37, RIGHT: 39 };
+$(document).ready(function(){
+    var submitButton = document.getElementById("submit");
+    submitButton.addEventListener("click",debounce(function(e){
+        console.log("button click " + new Date());
+    },1000));
+
+    //输入框防抖功能
+    var productCodeEle = document.getElementById("txtProduct");
+    productCodeEle.addEventListener("keyup",debounce(function(e){
+        //console.log(typeof(event) + "  " + event);
+        console.log(typeof(e));
+    // var e = event || window.event || arguments.callee.caller.arguments[0];
+    // if (e && (e.keyCode == 13 || e.keyCode == _KeyBoard1.UP || e.keyCode == _KeyBoard1.DOWN || e.keyCode == _KeyBoard1.LEFT || e.keyCode == _KeyBoard1.RIGHT || e.keyCode == _KeyBoard1.RETURN)) {
+    //     return;
+    // }
+    // else 
+        SerachProduct();
+    },1000));
+
+});
+
+// $("#txtProduct").bind("keyup",function(event){
+   
+// });
+
+
+function debounce(fn,delay = 500){
+    let timer = null;
+    return function(...args){
+        console.log("args = " + args);
+        const context = this;
+        if(timer){
+            clearTimeout(timer);
+        }else{
+            console.log("timer = " + timer);
+        }
+        timer=setTimeout(()=>{
+            fn.apply(context,args)
+            //timer = null;
+        },delay)
+    }
+}
+function SerachProduct(){
+    console.log($("#txtProduct").val());
+}
+</script>
+
+</body>
+</html>
+
+<!-- 
+    防抖函数
+    https://www.jianshu.com/p/82f8237640f2
+    https://www.cnblogs.com/aurora-ql/p/13757733.html
+
+    jQuery页面初始化
+    https://blog.csdn.net/tjcyjd/article/details/6713474
+-->
