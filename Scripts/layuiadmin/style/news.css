@@ -1,0 +1,264 @@
+html{background: #e9ecf3}
+
+.layui-layout-admin .layui-logo{
+    height: 77px;
+    position: inherit;
+    background: #ffffff !important;
+}
+.layui-layout-admin .layui-logo img{
+    width: 100%;
+}
+.layui-side-menu .layui-nav .layui-nav-item>a {
+    /* background: #f2f6f9; */
+    color: #97abb7;
+}
+.layui-side-menu .layui-side-scroll{
+    background: #ffffff !important;
+}
+.layui-side-menu .layui-nav{
+    margin-top: 0;
+}
+.layui-nav-tree .layui-nav-item{
+    line-height: 40px;
+}
+.layui-nav-itemed>.layui-nav-child{
+    background-color: #fff !important;
+}
+.layui-side-menu .layui-nav .layui-nav-item a{
+    color: #827d7d;
+    font-weight: bold;
+    font-size: 14px;
+}
+.layui-nav-itemed>a, .layui-nav-tree .layui-nav-title a, .layui-nav-tree .layui-nav-title a:hover{
+    color: #97abb7 !important;
+}
+li.layui-nav-item.layui-nav-itemed >a:first-child{
+    background: #088bea !important;
+    border-left: 3px solid #78b9e8 !important;
+    color: #fff !important;
+}
+
+.layui-side-menu .layui-nav .layui-nav-item a:hover{
+    background: #f2f6f9;
+}
+#LAYDH .layui-nav-tree .layui-this,#LAYDH .layui-nav-tree .layui-this>a,#LAYDH .layui-nav-tree .layui-nav-child dd.layui-this,#LAYDH .layui-nav-tree .layui-nav-child dd.layui-this a{
+    background-color: #f2f6f9 !important;
+    color: #97abb7;
+}
+.layui-side-menu .layui-nav .layui-nav-itemed>.layui-nav-child{
+    padding:0
+}
+.layui-nav-tree .layui-nav-child a{
+    font-weight: bold;
+}
+.user .user-photo{
+    width: 94px;
+    height: 94px;
+    display: inline-block;
+    margin: 0px 20px 0 20px;
+    float: left;
+    background: #17b8cf;
+    border-radius: 50%;
+}
+.user .user-photo img{
+    width: 94px;
+    height: 94px;
+    border-radius:50% ;
+}
+.user{
+    height: 120px;
+    background: #2d8ae9;
+    border-radius: 10px;
+    box-shadow: none;
+    border: 0;
+    padding: 32px 0;
+}
+.user_left{
+    display: inline-block;
+    padding: 0;
+    float: left;
+    height: 113px;
+    width: calc(100% - 134px);
+}
+.user_left ul:first-child li{
+    width: 100%;
+    line-height: 29px;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    margin: 0;
+    height: 30px;
+}
+
+.user_left ul.first-child-ul li{
+	 /* line-height: 18px; */
+}
+
+
+.user_left ul:first-child li span:first-child{
+	width: auto;
+	display: inline-block;
+	text-align: right;
+	margin: 0 7px 0 0;
+}
+#lbBaMoney{
+	font-size:20px
+}
+.user_left ul:last-child li a{
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    padding: 5px 17px;
+    line-height: normal;
+    height: inherit;
+    background: none;
+    margin: 18px 0 2px 0;
+}
+.user-photo.Money{
+    background: #16b7cf url(../../../images/bicon02.png) no-repeat center center;
+}
+.Question .user-photo{
+    background: #e5a210 url(../../../images/bicon03.png) no-repeat center center;
+}
+.user.Money_bg{
+    background: #15c4dc;
+}
+.user.Question{
+    background: #ecb438;
+}
+.Question .user_left ul:first-child li{
+    float: left;
+    height: 108px;
+    width: 44%;
+    display: inline-block;
+}
+.cg2.f38{
+    display: block;
+    color: #fff;
+    font-size: 24px;
+}
+.after-content:after{
+    position: absolute;
+    content: "";
+    width: 4px;
+    background: #62afe6;
+    height: 24px;
+    left: 0;
+    top: 15px;
+}
+.x-admin-backlog-body.gn-center{
+    text-align: center;
+    margin: 36px 0 16px 0;
+    display: block;
+}
+.layui-tab-content.layui-bg-gray{
+    font-size: 18px;
+    position: relative;
+    /* top: 9px; */
+    height: 42px;
+    /* line-height: 37px; */
+    /* border-left: 4px solid #62afe6; */
+    padding: 5px 0 5px 13px;
+    background: #fff!important;
+    border-bottom: 1px solid #e6e6e6;
+    font-weight: bold;
+}
+.layui-card{
+    border-radius: 6px;
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog li{
+    /* text-align: center; */
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog li h5{
+    margin: 26px 0;
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog.caozuo li{
+    height: 35px;
+    /* line-height: 21px; */
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog.caozuo a{
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #088bea;
+    border-radius: 5px;
+    display: inline-block;
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog.caozuo{
+    /* height: 80px; */
+    padding: 10px 0 0 0;
+    margin: 0 0 0 0;
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog.caozuo li h5{
+    text-align: left;
+    padding: 0 16px 0 16px;
+    margin: 0px 0 0 0;
+    color: #585b5e;
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog.caozuo ul{
+    /* padding: 0; */
+    margin: 0px 12px;
+    height: 35px;
+}
+.caozuo.btnCzuo li:nth-child(1) a{
+    background: #fff url(../../../images/czicon01.png) no-repeat 4px center;
+    border: 1px solid #0a84cc;
+    padding: 0px 8px 0 23px;
+}
+.caozuo.btnCzuo li:nth-child(2) a{
+    background: #fff url(../../../images/czicon02.png) no-repeat 4px center;
+    border: 1px solid #0a84cc;
+    padding: 0px 8px 0 23px;
+}
+.caozuo.btnCzuo li:nth-child(3) a{
+    background: #fff url(../../../images/czicon03.png) no-repeat 4px center;
+    border: 1px solid #0a84cc;
+    padding: 0px 8px 0 23px;
+}
+.caozuo.btnCzuo li:nth-child(4) a{
+    background: #fff url(../../../images/czicon02.png) no-repeat 4px center;
+    border: 1px solid #0a84cc;
+    padding: 0px 8px 0 23px;
+}
+.step-item-main-title{
+	color:#088bea;
+	font-size: 20px;
+	font-weight: initial;
+}
+.layui-col-space5{
+	margin:20px 0;
+}
+.layui-col-space5>*{
+    padding:0
+}
+.layui-col-space15>*{
+    padding:0
+}
+.layui-col-space15{
+    margin:0
+}
+a.x-admin-backlog-body.gn-center:hover {
+	text-decoration:none !important;
+	color: #ee9615 !important;
+	}
+a.x-admin-backlog-body.gn-center:hover .step-item-main-title{
+	text-decoration:none !important;
+	color: #ee9615 !important;
+	}
+#LAY_app_tabsheader li:first-child {
+    display:none
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog.caozuo li h5.cstestButton{
+	width: auto;
+	background: #458ad2;
+	color: #fff;
+	border-radius: 3px;
+	line-height: 33px;
+	margin-bottom:10px;
+	min-width: 100px;
+}
+.layui-row.layui-col-space10.layui-this.x-admin-carousel.x-admin-backlog.caozuo li  p{
+	color:#ccc;
+	    border-bottom: 1px solid #e0dfdf;
+    padding: 0 0 9px 0;
+}

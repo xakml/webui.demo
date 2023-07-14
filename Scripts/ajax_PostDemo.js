@@ -15,11 +15,12 @@
         $.ajax(
             {
                 type: 'Post',
-                url: 'http://localhost/identity2study/AppUser/Create',
+                url: 'http://localhost/WebUI.Server/api/demo_message_rec',
                 data: formData,
                 processData:false,
-                contentType:false,
+                dataType:"text",
                 success: function (data, status) {
+                    console.log(typeof data);
                     console.log(data);
                     console.log(status);
                     alert("提交成功！");
@@ -30,7 +31,8 @@
                     // 状态
                     console.log(xhr.readyState);
                     // 错误信息   
-                    console.log(error_msg);
+                    console.log('错误消息:');
+                    console.log( error_msg);
                 }
 
             }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <title>国际货代&国际速递</title>
+
+    <link rel="stylesheet" href="../scripts/layuiadmin/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../scripts/layuiadmin/style/admin.css" media="all" />
+    </meta>
+<body class="layui-layout-body">
+    <div id="LAY_app">
+    	 <div class="layui-layout layui-layout-admin">
+            <div class="layui-header">
+            	<!-- 头部区域 -->
+                <ul class="layui-nav layui-layout-left">
+                    <li class="layui-nav-item layadmin-flexible" lay-unselect>
+                        <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
+                            <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item layui-hide-xs" lay-unselect>
+                        <a href="https://www.jcex.com/" target="_blank" title="官网">
+                            <i class="layui-icon layui-icon-website"></i>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item" lay-unselect>
+                        <a href="javascript:;" layadmin-event="refresh" title="刷新">
+                            <i class="layui-icon layui-icon-refresh-3"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+                    <li class="layui-nav-item layui-hide-xs" lay-unselect>
+                       <a href="javascript:;" layadmin-event="fullscreen">
+                           <i class="layui-icon layui-icon-username"></i>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item" lay-unselect>
+                       <a href="javascript:;" layadmin-event="fullscreen">
+                           <i class="layui-icon layui-icon-screen-full"></i>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dt><span class="layui-icon layui-icon-screen-full"></span></dt>
+                            <dd><a lay-href="manager/user_list.aspx" data-lang="string_lang4">基本资料</a></dd>
+                            <dd><a lay-href="manager/manager_pwd.aspx" data-lang="string_lang5">修改密码</a></dd>
+                            <hr>
+                            <dd style="text-align: center;"><a id="LOGOUT"  data-lang="string_lang6">退出</a></dd>
+                        </dl>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
